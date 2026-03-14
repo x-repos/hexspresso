@@ -2,9 +2,9 @@
 # Run all slab DFT calculations sequentially using eq_run.sh wrapper.
 #
 # Usage:
-#   Phase 1: Run notebook cells for Calcs 0-3, then:
+#   Phase 1: python gen_inputs.py → generates Calcs 1-3
 #     ./eq_run.sh nb2o5_cluster.pwi
-#   Phase 2: Run notebook cells for Calcs 4-7, then:
+#   Phase 2: python gen_inputs.py → generates Calcs 4-7 (reads optimized cluster)
 #     ./run.sh
 #
 # Or run everything if all .pwi files already exist:
