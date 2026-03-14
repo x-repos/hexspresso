@@ -1,0 +1,58 @@
+&CONTROL
+   calculation      = 'relax'
+   restart_mode     = 'from_scratch'
+   tstress          = .false.
+   tprnfor          = .true.
+   outdir           = './out/'
+   prefix           = 'nb2o5_cluster'
+   max_seconds      = 86000
+   etot_conv_thr    = 0.00014
+   forc_conv_thr    = 0.0001
+   pseudo_dir       = '/home/x/Workspace/espresso/pseudo'
+/
+&SYSTEM
+   ecutwfc          = 60.0
+   ecutrho          = 800.0
+   occupations      = 'smearing'
+   degauss          = 0.01
+   smearing         = 'cold'
+   nspin            = 2
+   starting_magnetization(1) = 0.5
+   starting_magnetization(2) = 0.0
+   ntyp             = 2
+   nat              = 7
+   ibrav            = 0
+/
+&ELECTRONS
+   electron_maxstep = 200
+   conv_thr         = 1.2e-09
+   mixing_beta      = 0.2
+/
+&IONS
+/
+&CELL
+/
+&FCP
+/
+&RISM
+/
+ATOMIC_SPECIES
+Nb  92.90637 Nb.pbe-spn-kjpaw_psl.0.3.0.UPF
+O  15.999 O.pbe-n-kjpaw_psl.0.1.UPF
+
+K_POINTS gamma
+
+CELL_PARAMETERS angstrom
+12.00000000000000 0.00000000000000 0.00000000000000
+0.00000000000000 12.00000000000000 0.00000000000000
+0.00000000000000 0.00000000000000 12.00000000000000
+
+ATOMIC_POSITIONS angstrom
+Nb  4.3500000000 6.0000000000 6.1000000000  
+Nb  7.6500000000 6.0000000000 6.1000000000  
+O  6.0000000000 7.0000000000 6.1000000000  
+O  6.0000000000 5.0000000000 6.1000000000  
+O  6.0000000000 6.0000000000 4.7000000000  
+O  3.0500000000 6.0000000000 7.3000000000  
+O  8.9500000000 6.0000000000 7.3000000000  
+

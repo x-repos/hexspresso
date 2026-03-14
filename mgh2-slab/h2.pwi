@@ -1,0 +1,45 @@
+&CONTROL
+   calculation      = 'relax'
+   restart_mode     = 'from_scratch'
+   tstress          = .true.
+   tprnfor          = .true.
+   outdir           = './out/'
+   prefix           = 'h2'
+   max_seconds      = 27360
+   etot_conv_thr    = 0.00014
+   forc_conv_thr    = 0.0001
+   pseudo_dir       = '/home/x/Workspace/espresso/pseudo'
+/
+&SYSTEM
+   ecutwfc          = 60
+   ecutrho          = 480
+   occupations      = 'fixed'
+   ntyp             = 1
+   nat              = 2
+   ibrav            = 0
+/
+&ELECTRONS
+   conv_thr         = 1.2e-09
+/
+&IONS
+/
+&CELL
+/
+&FCP
+/
+&RISM
+/
+ATOMIC_SPECIES
+H 1.008 H.pbe-rrkjus_psl.1.0.0.UPF
+
+K_POINTS gamma
+
+CELL_PARAMETERS angstrom
+10.00000000000000 0.00000000000000 0.00000000000000
+0.00000000000000 10.00000000000000 0.00000000000000
+0.00000000000000 0.00000000000000 10.00000000000000
+
+ATOMIC_POSITIONS angstrom
+H 5.0000000000 5.0000000000 4.6293000000  
+H 5.0000000000 5.0000000000 5.3707000000  
+
