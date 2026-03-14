@@ -21,7 +21,7 @@ all_pseudopotentials = {
 
 # --- Tunable parameters ---
 ECUTRHO = 480          # charge density cutoff (Ry)
-SUPERCELL = (2, 2, 2)  # slab supercell (2,2,2)=72 atoms, (2,2,1)=36 atoms
+SUPERCELL = (2, 2, 2)  # slab supercell (2,2,2)=144 atoms, (2,2,1)=72 atoms
 SLAB_VACUUM = 12       # vacuum per side (Angstrom)
 KPTS = (4, 4, 1)       # k-point mesh for slab calcs
 

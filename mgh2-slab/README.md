@@ -20,17 +20,17 @@ E_ads = E(slab+H) - E(slab) - (n/2)·E(H2_gas)
 |------|--------|-------|------|
 | 0 | Nb2O5 cluster (isolated optimization) | 7 | `nb2o5_cluster.pwi` |
 | 1 | H2 gas reference | 2 | `h2.pwi` |
-| 2 | Clean Mg2Ni(0001) slab | 72 | `slab_clean.pwi` |
-| 3 | Slab + H | 73 | `slab_H.pwi` |
-| 4 | Slab + Nb2O5 | 79 | `slab_Nb2O5.pwi` |
-| 5 | Slab + Nb2O5 + H | 80 | `slab_Nb2O5_H.pwi` |
-| 6 | Slab + Nb2O5 + Fe | 80 | `slab_Nb2O5_Fe.pwi` |
-| 7 | Slab + Nb2O5 + Fe + H | 81 | `slab_Nb2O5_Fe_H.pwi` |
+| 2 | Clean Mg2Ni(0001) slab | 144 | `slab_clean.pwi` |
+| 3 | Slab + H | 145 | `slab_H.pwi` |
+| 4 | Slab + Nb2O5 | 151 | `slab_Nb2O5.pwi` |
+| 5 | Slab + Nb2O5 + H | 152 | `slab_Nb2O5_H.pwi` |
+| 6 | Slab + Nb2O5 + Fe | 152 | `slab_Nb2O5_Fe.pwi` |
+| 7 | Slab + Nb2O5 + Fe + H | 153 | `slab_Nb2O5_Fe_H.pwi` |
 
 ## Slab Construction
 
 - **Bulk source:** `../mgh2-cif/cif/mg2ni-P62.cif` (Mg2Ni, P6222, a=b=5.197 Å, c=13.202 Å)
-- **Supercell:** 2×2×2 (72 atoms: 48 Mg + 24 Ni)
+- **Supercell:** 2×2×2 (144 atoms: 96 Mg + 48 Ni)
 - **Vacuum:** 12 Å per side (24 Å total)
 - **Constraints:** Bottom half of slab atoms fixed (FixAtoms)
 - **K-points:** 4×4×1 (slab), gamma-point (H2, Nb2O5 cluster)
@@ -103,9 +103,8 @@ mgh2-slab/
 ## Hardware Notes
 
 - GPU: 32 GB VRAM, System: 60 GB RAM
-- Estimated memory per slab calc: ~44 GB (split across GPU + CPU)
-- Originally planned ecutrho=800 but required ~143 GB
-- Reduced ecutrho to 480 to fit hardware (2×2×2 supercell = 72 atoms)
+- Estimated memory per slab calc: ~143 GB at ecutrho=800 (split across GPU + CPU)
+- Reduced ecutrho to 480 to fit hardware (2×2×2 supercell = 144 atoms)
 
 ## Expected Results
 
