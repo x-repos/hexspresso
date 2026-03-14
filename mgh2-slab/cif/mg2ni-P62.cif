@@ -1,0 +1,50 @@
+
+##########################################################################
+#               Crystallographic Information Format file
+#               Produced by PyCifRW module
+#
+#  This is a CIF file.  CIF has been adopted by the International
+#  Union of Crystallography as the standard for data archiving and
+#  transmission.
+#
+#  For information on this file format, follow the CIF links at
+#  http://www.iucr.org
+##########################################################################
+
+data_0
+
+loop_
+  _atom_site_label
+  _atom_site_fract_x
+  _atom_site_fract_y
+  _atom_site_fract_z
+  _atom_site_type_symbol
+         Mg1       0.16435738788478169           0.8356426120961181  0.8333333333320708 Mg       
+         Mg2       0.16435738788961127           0.3287147757855471  0.49999999999621275          Mg       
+         Mg3       0.8356426121152183  0.16435738790388188           0.8333333333320708 Mg       
+         Mg4       0.8356426120911484  0.6712852242144529  0.49999999999621275           Mg       
+         Mg5       0.6712852241952585  0.8356426120961181  0.16666666666792904           Mg       
+         Mg6       0.32871477578550135           0.16435738790388188           0.16666666666792904          Mg       
+         Mg7       0.5       0.5       0.7173700677960877  Mg        
+         Mg8       0.49999999999037986           0.0       0.6159632655321958  Mg       
+         Mg9       0.5       0.5       0.9492965988604796  Mg        
+         Mg10      0.49999999999037986           0.0       0.38403673446780395           Mg       
+         Mg11      0.9999999999903799  0.5       0.2826299322039122  Mg        
+         Mg12      0.9999999999903799  0.5       0.05070340113952025           Mg       
+         Ni1       0.5       0.5       0.3333333333282837  Ni        
+         Ni2       0.49999999999037986           0.0       0.0       Ni        
+         Ni3       0.9999999999903799  0.5       0.6666666666641418  Ni        
+         Ni4       0.0       0.0       0.3333333333282837  Ni        
+         Ni5       0.0       0.0       0.0       Ni        
+         Ni6       0.0       0.0       0.6666666666641418  Ni 
+_cell_angle_alpha                       90.0
+_cell_angle_beta                        90.0
+_cell_angle_gamma                       119.99999999958494
+_cell_length_a                          5.1974510419
+_cell_length_b                          5.1974510418652144
+_cell_length_c                          13.2024169613
+loop_
+  _symmetry_equiv_pos_as_xyz
+         'x, y, z' 
+_symmetry_int_tables_number             1
+_symmetry_space_group_name_H-M          'P 1'

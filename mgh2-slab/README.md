@@ -30,7 +30,7 @@ E_ads = E(slab+H) - E(slab) - (n/2)·E(H2_gas)
 ## Slab Construction
 
 - **Bulk source:** `../mgh2-cif/cif/mg2ni-P62.cif` (Mg2Ni, P6222, a=b=5.197 Å, c=13.202 Å)
-- **Supercell:** 2×2×1 (72 atoms: 48 Mg + 24 Ni)
+- **Supercell:** 2×2×2 (72 atoms: 48 Mg + 24 Ni)
 - **Vacuum:** 12 Å per side (24 Å total)
 - **Constraints:** Bottom half of slab atoms fixed (FixAtoms)
 - **K-points:** 4×4×1 (slab), gamma-point (H2, Nb2O5 cluster)
@@ -72,19 +72,19 @@ Edge-sharing NbO6 dimer fragment (2 Nb + 5 O):
 ## Workflow
 
 ```
-1. Generate Calcs 0-3 inputs      (main-write.ipynb Phase 1, or run script)
-2. Run Calc 0: Nb2O5 cluster      ./eq_run.sh nb2o5_cluster.pwi
-3. Generate Calcs 4-7 inputs      (main-write.ipynb Phase 2, reads optimized cluster)
-4. Run all remaining calculations  ./run.sh  (skips completed calcs)
-5. Extract energies                ./energy.sh
-6. Compute adsorption energies     python adsorption.py
+1. Generate Calcs 1-3 inputs       python gen_inputs.py  (Phase 1)
+2. Run Calc 0: Nb2O5 cluster       ./eq_run.sh nb2o5_cluster.pwi
+3. Generate Calcs 4-7 inputs       python gen_inputs.py  (Phase 2, reads optimized cluster)
+4. Run all remaining calculations   ./run.sh  (skips completed calcs)
+5. Extract energies                 ./energy.sh
+6. Compute adsorption energies      python adsorption.py
 ```
 
 ## File Layout
 
 ```
 mgh2-slab/
-├── main-write.ipynb          # Structure generation notebook (ASE → .pwi)
+├── gen_inputs.py             # Structure generation script (ASE → .pwi)
 ├── eq_run.sh                 # pw.x wrapper (handles LD_PRELOAD for GPU build)
 ├── run.sh                    # Run all calculations sequentially
 ├── energy.sh                 # Extract energies from .pwo files
@@ -104,8 +104,8 @@ mgh2-slab/
 
 - GPU: 32 GB VRAM, System: 60 GB RAM
 - Estimated memory per slab calc: ~44 GB (split across GPU + CPU)
-- Originally planned 2×2×2 supercell (144 atoms, ecutrho=800) but required 143 GB
-- Reduced to 2×2×1 (72 atoms) + ecutrho=480 to fit hardware
+- Originally planned ecutrho=800 but required ~143 GB
+- Reduced ecutrho to 480 to fit hardware (2×2×2 supercell = 72 atoms)
 
 ## Expected Results
 

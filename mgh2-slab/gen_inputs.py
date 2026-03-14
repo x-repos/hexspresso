@@ -71,7 +71,7 @@ def make_slab_input_params(prefix, species_list):
 
 
 def build_mg2ni_slab():
-    bulk_struct = read('../mgh2-cif/cif/mg2ni-P62.cif')
+    bulk_struct = read('cif/mg2ni-P62.cif')
     slab = bulk_struct * SUPERCELL
     slab.center(vacuum=SLAB_VACUUM, axis=2)
     z = slab.positions[:, 2]
