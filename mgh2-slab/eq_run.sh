@@ -13,7 +13,7 @@ HPCX=$NVHPC/Linux_x86_64/25.9/comm_libs/13.0/hpcx/latest
 export LD_LIBRARY_PATH=$OMPI/lib:$COMPILERS/lib:$HPCX/ucx/lib:$HPCX/ucc/lib:$CUDA_HOME/lib64
 export LD_PRELOAD=$COMPILERS/lib/libnvomp.so
 export NVCOMPILER_OMP_DISABLE_WARNINGS=true
-export OMP_NUM_THREADS=1
+export OMP_NUM_THREADS=16
 export CUDA_VISIBLE_DEVICES=0
 
 PW=/home/x/Programs/espresso_gpu/bin/pw.x
