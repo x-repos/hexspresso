@@ -9,7 +9,7 @@ from ase import Atoms
 from ase.constraints import FixAtoms
 import numpy as np  # noqa: F401 — used by ASE internally
 
-pseudo_dir = '/home/x/Workspace/espresso/pseudo'
+pseudo_dir = '../pseudo'
 all_pseudopotentials = {
     'Mg': 'Mg.pbe-n-kjpaw_psl.0.3.0.UPF',
     'Ni': 'ni_pbe_v1.4.uspp.F.UPF',
